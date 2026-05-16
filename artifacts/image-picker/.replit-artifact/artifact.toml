@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Image Picker"
+version = "1.0.0"
+id = "artifacts/image-picker"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19904
+
+[services.development]
+run = "pnpm --filter @workspace/image-picker run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/image-picker", "run", "build" ]
+publicDir = "artifacts/image-picker/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19904"
+BASE_PATH = "/"

@@ -1,0 +1,73 @@
+uploads = []
+
+[[generated]]
+id = "-PDxZXznYay8uStfsGT5u"
+uri = "file://artifacts/image-picker/public/images/nature-1.png"
+type = "image"
+title = "Mountain Sunrise"
+
+[[generated]]
+id = "n0gYvHbfj49c9GB5QwO_h"
+uri = "file://artifacts/image-picker/public/images/nature-2.png"
+type = "image"
+title = "Deep Forest"
+
+[[generated]]
+id = "4oxZQZhgsFtUB4zvdxfk9"
+uri = "file://artifacts/image-picker/public/images/nature-3.png"
+type = "image"
+title = "Ocean Waves"
+
+[[generated]]
+id = "DYq2W59XEHV8y10bPmB8D"
+uri = "file://artifacts/image-picker/public/images/nature-4.png"
+type = "image"
+title = "Desert Dunes"
+
+[[generated]]
+id = "p1pL4Vf_9ysav496G1lJc"
+uri = "file://artifacts/image-picker/public/images/arch-1.png"
+type = "image"
+title = "Glass Tower"
+
+[[generated]]
+id = "UDIShLyhoaINGwmteNAkm"
+uri = "file://artifacts/image-picker/public/images/arch-2.png"
+type = "image"
+title = "Brutalist Concrete"
+
+[[generated]]
+id = "stePCnH3ilIHcJeySMXdF"
+uri = "file://artifacts/image-picker/public/images/arch-3.png"
+type = "image"
+title = "Gothic Arches"
+
+[[generated]]
+id = "wYQEMZxAGjpr4S0p3PuR7"
+uri = "file://artifacts/image-picker/public/images/arch-4.png"
+type = "image"
+title = "Modern Home"
+
+[[generated]]
+id = "ngtY-SzE7X_FVcj58v9AO"
+uri = "file://artifacts/image-picker/public/images/food-1.png"
+type = "image"
+title = "Fresh Pasta"
+
+[[generated]]
+id = "EpM9DcuIkyrVgfxyARGmn"
+uri = "file://artifacts/image-picker/public/images/food-2.png"
+type = "image"
+title = "Sushi Roll"
+
+[[outputs]]
+id = "XxPRFQEyuaRvAnr4_zB1O"
+uri = "file://artifacts/image-picker/public/images/food-3.jpg"
+type = "image"
+title = "Crusty loaf of sourdough artisan bread cut open, warm moody lighting, rustic bakery setting"
+
+[[outputs]]
+id = "T829onpn3Ql1UddugPcuI"
+uri = "file://artifacts/image-picker/public/images/food-4.jpg"
+type = "image"
+title = "Pour over coffee brewing"
