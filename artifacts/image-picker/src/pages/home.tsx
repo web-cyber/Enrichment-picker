@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, X, Plus, Trash2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Check, Plus, Trash2, Pencil } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 
@@ -75,8 +74,36 @@ const initialSelection = (): SelectionState =>
 export default function Home() {
   const [selections, setSelections] = useState<SelectionState>(initialSelection);
   const [activeGroupId, setActiveGroupId] = useState<string>(GROUPS[0].id);
+  const [groupNames, setGroupNames] = useState<Record<string, string>>(
+    Object.fromEntries(GROUPS.map((g) => [g.id, g.name]))
+  );
+  const [editingGroupId, setEditingGroupId] = useState<string | null>(null);
+  const [editDraft, setEditDraft] = useState("");
+  const editInputRef = useRef<HTMLInputElement>(null);
 
   const activeGroup = GROUPS.find((g) => g.id === activeGroupId)!;
+  const activeGroupName = groupNames[activeGroupId];
+
+  const startEditing = (groupId: string) => {
+    setEditingGroupId(groupId);
+    setEditDraft(groupNames[groupId]);
+    setTimeout(() => editInputRef.current?.select(), 0);
+  };
+
+  const commitEdit = () => {
+    if (editingGroupId) {
+      const trimmed = editDraft.trim();
+      if (trimmed) {
+        setGroupNames((prev) => ({ ...prev, [editingGroupId]: trimmed }));
+      }
+      setEditingGroupId(null);
+    }
+  };
+
+  const handleEditKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") commitEdit();
+    if (e.key === "Escape") setEditingGroupId(null);
+  };
 
   const toggleImage = (imageId: string) => {
     setSelections((prev) => {
@@ -146,7 +173,7 @@ export default function Home() {
                     }`}
                   style={isActive ? { backgroundColor: g.color } : {}}
                 >
-                  <span>{g.name}</span>
+                  <span className="truncate max-w-full">{groupNames[g.id]}</span>
                   <span className={`font-mono text-[10px] ${isActive ? "opacity-80" : ""}`}>
                     {count} item{count !== 1 ? "s" : ""}
                   </span>
@@ -166,21 +193,46 @@ export default function Home() {
               return (
                 <div key={g.id} data-testid={`section-group-${g.id}`}>
                   <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 flex-1 min-w-0">
                       <span
                         className="inline-block w-2.5 h-2.5 rounded-full shrink-0"
                         style={{ backgroundColor: g.color }}
                       />
-                      <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: g.color }}>
-                        {g.name}
-                      </span>
+                      {editingGroupId === g.id ? (
+                        <input
+                          ref={editInputRef}
+                          value={editDraft}
+                          onChange={(e) => setEditDraft(e.target.value)}
+                          onBlur={commitEdit}
+                          onKeyDown={handleEditKeyDown}
+                          className="text-xs font-semibold uppercase tracking-wider bg-transparent border-b outline-none flex-1 min-w-0"
+                          style={{ color: g.color, borderColor: g.color }}
+                          maxLength={24}
+                          data-testid={`input-rename-${g.id}`}
+                        />
+                      ) : (
+                        <button
+                          className="flex items-center gap-1.5 group/rename min-w-0"
+                          onClick={() => startEditing(g.id)}
+                          data-testid={`button-rename-${g.id}`}
+                          title="Click to rename"
+                        >
+                          <span className="text-xs font-semibold uppercase tracking-wider truncate" style={{ color: g.color }}>
+                            {groupNames[g.id]}
+                          </span>
+                          <Pencil
+                            className="w-3 h-3 shrink-0 opacity-0 group-hover/rename:opacity-60 transition-opacity"
+                            style={{ color: g.color }}
+                          />
+                        </button>
+                      )}
                     </div>
                     {selectedImages.length > 0 && (
                       <button
                         onClick={() => clearGroup(g.id)}
-                        className="text-muted-foreground hover:text-destructive transition-colors"
+                        className="text-muted-foreground hover:text-destructive transition-colors shrink-0"
                         data-testid={`button-clear-group-${g.id}`}
-                        aria-label={`Clear ${g.name}`}
+                        aria-label={`Clear ${groupNames[g.id]}`}
                       >
                         <Trash2 className="w-3.5 h-3.5" />
                       </button>
@@ -239,7 +291,7 @@ export default function Home() {
             data-testid="text-active-group-bar"
           >
             <Plus className="w-4 h-4 opacity-80" />
-            <span>Clicking images will add them to <strong>{activeGroup.name}</strong></span>
+            <span>Clicking images will add them to <strong>{activeGroupName}</strong></span>
           </div>
 
           <motion.div
