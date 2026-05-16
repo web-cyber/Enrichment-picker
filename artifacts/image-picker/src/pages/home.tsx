@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, Plus, Trash2, Pencil } from "lucide-react";
+import { Check, Plus, Trash2, Pencil, Download } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 
@@ -123,6 +123,28 @@ export default function Home() {
 
   const clearAll = () => setSelections(initialSelection());
 
+  const exportSelections = () => {
+    const lines: string[] = [];
+    GROUPS.forEach((g) => {
+      const selected = IMAGES.filter((img) => selections[g.id].has(img.id));
+      if (selected.length === 0) return;
+      lines.push(groupNames[g.id].toUpperCase());
+      lines.push("─".repeat(groupNames[g.id].length));
+      selected.forEach((img, i) => {
+        lines.push(`${String(i + 1).padStart(2, "0")}. ${img.title}`);
+      });
+      lines.push("");
+    });
+    if (lines.length === 0) return;
+    const blob = new Blob([lines.join("\n")], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "mood-board-selections.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   const getImageGroups = (imageId: string): Group[] =>
     GROUPS.filter((g) => selections[g.id].has(imageId));
 
@@ -148,13 +170,24 @@ export default function Home() {
               Active Group
             </span>
             {totalSelected > 0 && (
-              <button
-                onClick={clearAll}
-                className="text-xs text-muted-foreground hover:text-destructive transition-colors"
-                data-testid="button-clear-all"
-              >
-                Clear all
-              </button>
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={exportSelections}
+                  className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  data-testid="button-export"
+                  title="Download selections as .txt"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  Export
+                </button>
+                <button
+                  onClick={clearAll}
+                  className="text-xs text-muted-foreground hover:text-destructive transition-colors"
+                  data-testid="button-clear-all"
+                >
+                  Clear all
+                </button>
+              </div>
             )}
           </div>
           <div className="flex gap-2">
