@@ -5,6 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import animalExtract from "@assets/Animal_extract_1778984933920.jpeg";
 import busyBuddyTwistNTreat from "@assets/Busy_Buddy_Twist-N-Treat_1778989737835.jpeg";
+import siliconeSlowFeeder from "@assets/Silicone_slow_feeder_1778989887637.jpeg";
 import kong from "@assets/Kong_1778989737835.webp";
 import questForagerFlower from "@assets/Quest_forager_flower_1778989737835.jpg";
 import rubberWaterTub from "@assets/Rubber_Water_Tub_1778989737835.avif";
@@ -75,6 +76,7 @@ const IMAGE_SRCS: Record<string, string> = {
   "Kong": kong,
   "Quest forager flower": questForagerFlower,
   "Rubber Water Tub": rubberWaterTub,
+  "Silicone slow feeder": siliconeSlowFeeder,
   "Hol-ee Roller": holeeRoller,
   "Jolly Pets Tug-n-Toss": jollyPetsTugNToss,
   "Otto Pinecone Forager": ottoPineconeForager,
