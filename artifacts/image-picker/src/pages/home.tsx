@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Check, Plus, Trash2, Pencil, Download, X } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
+import babyToy from "@assets/Baby_toy_1778981977996.jpeg";
 import burlap from "@assets/Burlap_1778980494279.jpeg";
 import elevatedDogBed from "@assets/Elevated_Dog_Bed_1778980494279.webp";
 import firehose from "@assets/Firehose_1778980494279.jpeg";
@@ -19,6 +20,7 @@ import ropeImg from "@assets/Rope_1778978075048.jpeg";
 import stuffedAnimal from "@assets/Stuffed_animal_1778978075048.jpeg";
 
 const IMAGE_SRCS: Record<string, string> = {
+  "Baby toy": babyToy,
   "Burlap": burlap,
   "Elevated Dog Bed": elevatedDogBed,
   "Firehose": firehose,
