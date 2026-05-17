@@ -3,6 +3,25 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Check, Plus, Trash2, Pencil, Download, X } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
+import cottonPyramidSwing from "@assets/Cotton_pyramid_swing_1778978075047.webp";
+import cottonRopeBoing from "@assets/Cotton_rope_boing_toy_1778978075047.webp";
+import fabricHammock from "@assets/Fabric_hammock_1778978075047.jpeg";
+import fabricTunnel from "@assets/Fabric_tunnel_1778978075048.jpeg";
+import gibbonSwing from "@assets/Gibbon_Swing_1778978075048.jpeg";
+import jollyPetsRomp from "@assets/Jolly_Pets_Romp-N-Roll_1778978075048.webp";
+import ropeImg from "@assets/Rope_1778978075048.jpeg";
+import stuffedAnimal from "@assets/Stuffed_animal_1778978075048.jpeg";
+
+const IMAGE_SRCS: Record<string, string> = {
+  "Cotton pyramid swing": cottonPyramidSwing,
+  "Cotton rope boing toy": cottonRopeBoing,
+  "Fabric hammock": fabricHammock,
+  "Fabric tunnel": fabricTunnel,
+  "Gibbon Swing": gibbonSwing,
+  "Jolly Pets Romp-N-Roll": jollyPetsRomp,
+  "Rope": ropeImg,
+  "Stuffed animal": stuffedAnimal,
+};
 
 interface ImageData {
   id: string;
@@ -53,7 +72,7 @@ function makeItems(category: string, names: string[]): ImageData[] {
     id: `${prefix}-${i}`,
     title,
     category,
-    src: "",
+    src: IMAGE_SRCS[title] ?? "",
   }));
 }
 
@@ -146,10 +165,20 @@ function ItemCard({ img, isInActiveGroup, activeGroup, imageGroups }: {
   return (
     <div className="relative w-full aspect-square overflow-hidden rounded-xl bg-muted shadow-sm transition-all duration-300 ease-out"
       style={{ backgroundColor: bgColor }}>
-      {/* Initials placeholder */}
-      <div className="w-full h-full flex flex-col items-center justify-center px-3 gap-1">
-        <span className="text-white/30 text-3xl font-bold font-mono select-none">{initials}</span>
-      </div>
+      {img.src ? (
+        <img
+          src={img.src}
+          alt={img.title}
+          className={`w-full h-full object-cover transition-transform duration-500 ${
+            isInActiveGroup ? "scale-105" : "group-hover:scale-105"
+          }`}
+          loading="lazy"
+        />
+      ) : (
+        <div className="w-full h-full flex flex-col items-center justify-center px-3 gap-1">
+          <span className="text-white/30 text-3xl font-bold font-mono select-none">{initials}</span>
+        </div>
+      )}
 
       {/* Active-group tint overlay */}
       <div
