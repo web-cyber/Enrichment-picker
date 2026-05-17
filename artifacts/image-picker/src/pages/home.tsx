@@ -3,7 +3,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Check, Plus, Trash2, Pencil, Download, X } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
+import animalExtract from "@assets/Animal_extract_1778984933920.jpeg";
 import asapMirror from "@assets/ASAP_Mirror_1778982473519.jpeg";
+import bamboo from "@assets/Bamboo_1778984933920.jpeg";
+import browse from "@assets/Browse_1778984933921.jpeg";
+import coconutHusk from "@assets/Coconut_husk_1778984933921.jpeg";
+import feather from "@assets/feather_1778984933921.jpeg";
+import finePine from "@assets/Fine_pine_1778984933921.jpeg";
+import fur from "@assets/Fur_1778984933921.jpeg";
+import mulch from "@assets/Mulch_1778984933921.webp";
+import orchardGrass from "@assets/Orchard_grass_1778984933922.jpeg";
+import sand from "@assets/Sand_1778984933922.jpeg";
+import seasoning from "@assets/seasoning_1778984933922.jpeg";
+import stone from "@assets/Stone_1778984933922.jpeg";
+import straw from "@assets/Straw_1778984933922.jpeg";
 import bubbleBlower from "@assets/Bubble_blower_1778984271023.jpeg";
 import bubbles from "@assets/Bubbles_1778984271023.webp";
 import chalk from "@assets/Chalk_1778984271023.jpeg";
@@ -43,7 +56,20 @@ import ropeImg from "@assets/Rope_1778978075048.jpeg";
 import stuffedAnimal from "@assets/Stuffed_animal_1778978075048.jpeg";
 
 const IMAGE_SRCS: Record<string, string> = {
+  "Animal extract": animalExtract,
   "ASAP Mirror": asapMirror,
+  "Bamboo": bamboo,
+  "Browse": browse,
+  "Coconut husk": coconutHusk,
+  "Feather": feather,
+  "Fine pine": finePine,
+  "Fur": fur,
+  "Mulch": mulch,
+  "Orchard grass": orchardGrass,
+  "Sand": sand,
+  "Seasoning": seasoning,
+  "Stone": stone,
+  "Straw": straw,
   "Bubble blower": bubbleBlower,
   "Bubbles": bubbles,
   "Chalk": chalk,
