@@ -4,6 +4,10 @@ import { Check, Plus, Trash2, Pencil, Download, X } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import animalExtract from "@assets/Animal_extract_1778984933920.jpeg";
+import cardboard from "@assets/Cardboard_1778988783970.jpeg";
+import paper from "@assets/Paper_1778988783970.jpeg";
+import shreddedPaper from "@assets/Shredded_paper_1778988783970.jpeg";
+import wrappingPaper from "@assets/wrapping_paper_1778988783970.webp";
 import asapMirror from "@assets/ASAP_Mirror_1778982473519.jpeg";
 import bamboo from "@assets/Bamboo_1778984933920.jpeg";
 import browse from "@assets/Browse_1778984933921.jpeg";
@@ -57,6 +61,10 @@ import stuffedAnimal from "@assets/Stuffed_animal_1778978075048.jpeg";
 
 const IMAGE_SRCS: Record<string, string> = {
   "Animal extract": animalExtract,
+  "Cardboard": cardboard,
+  "Paper": paper,
+  "Shredded paper": shreddedPaper,
+  "Wrapping paper": wrappingPaper,
   "ASAP Mirror": asapMirror,
   "Bamboo": bamboo,
   "Browse": browse,
