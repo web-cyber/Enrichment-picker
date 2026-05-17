@@ -27,7 +27,6 @@ const CATEGORY_COLORS: Record<string, string> = {
   "Fabric":          "#7c5c3a",
   "Rope":            "#5a7a3a",
   "Strong Fabric":   "#3a5a7a",
-  "Burlap":          "#8a6a2a",
   "Soft Fabric":     "#7a3a5a",
   "Metal":           "#4a5a6a",
   "Miscellaneous":   "#6a4a7a",
@@ -66,11 +65,9 @@ const IMAGES: ImageData[] = [
     "Stuffed animal", "Gibbon Swing", "Jolly Pets Romp-N-Roll",
   ]),
   ...makeItems("Strong Fabric", [
-    "Hammock", "Nibblenet", "Gorilla Buster Bungee", "Elevated Dog Bed",
+    "Hammock", "Nibblenet", "Gorilla Buster Bungee", "Elevated Dog Bed", "Firehose",
   ]),
-  ...makeItems("Burlap", [
-    "Firehose",
-  ]),
+  ...makeItems("Burlap", []),
   ...makeItems("Soft Fabric", [
     "Baby toy",
   ]),
