@@ -293,7 +293,7 @@ const IMAGES: ImageData[] = [
     "Hanging Foraging Ball", "Hanging Snack Ball", "Hay Play Feeder", "Holey Moley",
     "Honeycomb", "Jolly Pets Teaser Ball", "Kong Wobblers", "Likit Snak A Ball",
     "Milkcrate", "Mini plastic feeder", "Naturalistic Log Feeder",
-    "Plastic Tub", "Plastic Tunnel", "Prima-forager", "Primate foraging unit",
+    "Plastic Tub", "Plastic Tunnel", "Prima-forager", "Primate foraging unit 1",
     "Puzzle feeder", "PVC", "Rocky Lou Feeder", "Saurus Egg", "Scent Ball",
     "Shake-A-Treat", "Shroom Room", "Slide", "Slow feeder", "Snack Shack",
     "Target", "Test tube rack", "Trough", "Water jug", "Water pan",
