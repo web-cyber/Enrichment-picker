@@ -98,6 +98,26 @@ import gibbonSwing from "@assets/Gibbon_Swing_1778978075048.jpeg";
 import jollyPetsRomp from "@assets/Jolly_Pets_Romp-N-Roll_1778978075048.webp";
 import ropeImg from "@assets/Rope_1778978075048.jpeg";
 import stuffedAnimal from "@assets/Stuffed_animal_1778978075048.jpeg";
+import fourTubeFeeder from "@assets/4_Tube_Feeder_1779082606095.jpeg";
+import amazingGraze from "@assets/Amazing_Graze_1779082606095.jpeg";
+import animalCapFeeder from "@assets/Animal_Cap_Feeder_1779082606096.jpeg";
+import boomerBallBobbin from "@assets/Boomer_Ball_Bobbin_1779082606096.jpeg";
+import bucket from "@assets/Bucket_1779082606096.webp";
+import bulletFeeder from "@assets/Bullet_Feeder_1779082606096.jpeg";
+import caitecFillableBirdBall from "@assets/Caitec_Fillable_Bird_Ball_1779082606096.jpeg";
+import catToy from "@assets/Cat_Toy_1779082606096.jpeg";
+import catchInteractiveFeeder from "@assets/Catch_Interactive_Feeder_1779082606096.jpeg";
+import collapsibleLadder from "@assets/Collapsible_Ladder_1779082606097.jpeg";
+import crumbleDiskHolder from "@assets/Crumble_Disk_Holder_1779082606097.jpeg";
+import foragingBall from "@assets/Foraging_Ball_1779082606097.jpeg";
+import foragingFeeder from "@assets/Foraging_Feeder_1779082606097.jpeg";
+import hangingForagingBall from "@assets/Hanging_Foraging_Ball_1779082606097.jpeg";
+import hangingSnackBall from "@assets/Hanging_Snack_Ball_1779082606097.jpeg";
+import hayPlayFeeder from "@assets/Hay_Play_Feeder_1779082606097.jpeg";
+import holeyMoley from "@assets/Holey_Moley_1779082606098.jpeg";
+import honeycomb from "@assets/Honeycomb_1779082606098.jpg";
+import jollyPetsTeaserBall from "@assets/Jolly_Pets_Teaser_Ball_1779082606098.jpeg";
+import kongWobblers from "@assets/Kong_Wobblers_1779082606098.jpeg";
 
 const IMAGE_SRCS: Record<string, string> = {
   "Animal extract": animalExtract,
@@ -194,6 +214,26 @@ const IMAGE_SRCS: Record<string, string> = {
   "Jolly Pets Romp-N-Roll": jollyPetsRomp,
   "Rope": ropeImg,
   "Stuffed animal": stuffedAnimal,
+  "4 Tube Feeder": fourTubeFeeder,
+  "Amazing Graze": amazingGraze,
+  "Animal Cap Feeder": animalCapFeeder,
+  "Boomer Ball Bobbin": boomerBallBobbin,
+  "Bucket": bucket,
+  "Bullet Feeder": bulletFeeder,
+  "Caitec Fillable Bird Ball": caitecFillableBirdBall,
+  "Cat Toy": catToy,
+  "Catch Interactive Feeder": catchInteractiveFeeder,
+  "Collapsible Ladder": collapsibleLadder,
+  "Crumble Disk Holder": crumbleDiskHolder,
+  "Foraging Ball": foragingBall,
+  "Foraging Feeder": foragingFeeder,
+  "Hanging Foraging Ball": hangingForagingBall,
+  "Hanging Snack Ball": hangingSnackBall,
+  "Hay Play Feeder": hayPlayFeeder,
+  "Holey Moley": holeyMoley,
+  "Honeycomb": honeycomb,
+  "Jolly Pets Teaser Ball": jollyPetsTeaserBall,
+  "Kong Wobblers": kongWobblers,
 };
 
 interface ImageData {
