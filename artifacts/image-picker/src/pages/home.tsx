@@ -146,6 +146,7 @@ import wobbleBall from "@assets/Wobble_Ball_1779082836359.jpeg";
 import zooHangingFoodBall from "@assets/Zoo_Hanging_Food_Ball_1779082836359.jpeg";
 import chainlinkFeeder from "@assets/Chainlink_feeder_1779165685314.jpg";
 import rockBowl from "@assets/Rock_Bowl_1779165791529.webp";
+import newDietItem from "@assets/New_diet_item_1779166845833.jpeg";
 
 const IMAGE_SRCS: Record<string, string> = {
   "Animal by-product": animalExtract,
@@ -290,6 +291,7 @@ const IMAGE_SRCS: Record<string, string> = {
   "Zoo Hanging Food Ball": zooHangingFoodBall,
   "Chainlink feeder": chainlinkFeeder,
   "Rock bowl": rockBowl,
+  "New diet item": newDietItem,
 };
 
 interface ImageData {
@@ -370,7 +372,7 @@ const IMAGES: ImageData[] = [
   ]),
   ...makeItems("Natural Material", [
     "Animal by-product", "Bamboo", "Browse", "Coconut husk", "Feather",
-    "Fine pine", "Fur", "Mulch", "Orchard grass", "Sand", "Seasoning", "Stone", "Straw",
+    "Fine pine", "Fur", "Mulch", "New diet item", "Orchard grass", "Sand", "Seasoning", "Stone", "Straw",
   ]),
   ...makeItems("Paper", [
     "Cardboard", "Paper", "Shredded paper", "Wrapping paper",
