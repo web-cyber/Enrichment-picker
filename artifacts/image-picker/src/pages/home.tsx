@@ -148,7 +148,7 @@ import chainlinkFeeder from "@assets/Chainlink_feeder_1779165685314.jpg";
 import rockBowl from "@assets/Rock_Bowl_1779165791529.webp";
 
 const IMAGE_SRCS: Record<string, string> = {
-  "Animal extract": animalExtract,
+  "Animal by-product": animalExtract,
   "Busy Buddy Twist-N-Treat": busyBuddyTwistNTreat,
   "Kong": kong,
   "Quest forager flower": questForagerFlower,
@@ -369,7 +369,7 @@ const IMAGES: ImageData[] = [
     "Paint", "Perfume", "Radio",
   ]),
   ...makeItems("Natural Material", [
-    "Animal extract", "Bamboo", "Browse", "Coconut husk", "Feather",
+    "Animal by-product", "Bamboo", "Browse", "Coconut husk", "Feather",
     "Fine pine", "Fur", "Mulch", "Orchard grass", "Sand", "Seasoning", "Stone", "Straw",
   ]),
   ...makeItems("Paper", [
