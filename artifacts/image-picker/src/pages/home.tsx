@@ -165,6 +165,7 @@ import rabbitNasium from "@assets/Rabbit_Nasium_1784348894681.jpeg";
 import greenSpinningPuzzleFeeder from "@assets/Green_spinning_puzzle_toy_1784348960506.jpeg";
 import jollyBallPushNPlay from "@assets/Jolly_Ball_Push-N-Play_1784348993778.jpeg";
 import funnyFloat from "@assets/Funny_Float_1784349033581.jpg";
+import lippedRing from "@assets/Lipped_Ring_1784349074589.jpg";
 
 const IMAGE_SRCS: Record<string, string> = {
   "Animal by-product": animalExtract,
@@ -328,6 +329,7 @@ const IMAGE_SRCS: Record<string, string> = {
   "Green spinning puzzle feeder": greenSpinningPuzzleFeeder,
   "Jolly Ball Push-N-Play": jollyBallPushNPlay,
   "Funny Float": funnyFloat,
+  "Lipped Ring": lippedRing,
 };
 
 interface ImageData {
@@ -427,7 +429,7 @@ const IMAGES: ImageData[] = [
     "Catch Interactive Feeder", "Chainlink feeder", "Collapsible Ladder", "Crumble Disk Holder",
     "Equi-Essentials Treat Ball", "Foraging Ball", "Foraging Feeder", "Funny Float", "Green spinning puzzle feeder", "Hanging Foraging Ball", "Hanging Snack Ball",
     "Hay Play Feeder", "Holey Moley", "Honeycomb", "Jolly Ball Push-N-Play", "Jolly Pets Teaser Ball", "Kaytree Hay and Food Bin Feeder",
-    "Kong Wobblers", "Likit Snak A Ball", "Milkcrate", "Mini plastic feeder",
+    "Kong Wobblers", "Likit Snak A Ball", "Lipped Ring", "Milkcrate", "Mini plastic feeder",
     "Naturalistic Log Feeder", "Plastic Tub", "Plastic Tunnel", "Prima-forager",
     "Primate Enrichment Treat Tube", "Primate foraging unit 1", "Primate foraging unit 2", "Puzzle feeder", "PVC",
     "Rabbit Nasium", "Rock bowl", "Rocky Lou Feeder", "Saurus Egg", "Scent Ball",
