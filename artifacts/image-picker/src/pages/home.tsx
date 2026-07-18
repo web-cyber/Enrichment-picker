@@ -152,6 +152,7 @@ import wiffleBall from "@assets/Wiffle_ball_1779167563001.jpeg";
 import blindForagingCups from "@assets/Blind_foraging_cups_1779503360809.jpg";
 import wireMeshBox from "@assets/Wire_mesh_box_1779503387398.jpg";
 import person from "@assets/Person_1779503697580.jpg";
+import phone from "@assets/Phone_1784340193835.jpeg";
 
 const IMAGE_SRCS: Record<string, string> = {
   "Animal by-product": animalExtract,
@@ -302,6 +303,7 @@ const IMAGE_SRCS: Record<string, string> = {
   "Blind foraging cups": blindForagingCups,
   "Wire mesh box": wireMeshBox,
   "Person": person,
+  "Phone": phone,
 };
 
 interface ImageData {
@@ -378,7 +380,7 @@ const IMAGES: ImageData[] = [
   ]),
   ...makeItems("Miscellaneous", [
     "Bubble blower", "Bubbles", "Chalk", "Laser projector", "Oil scent",
-    "Paint", "Perfume", "Person", "Radio",
+    "Paint", "Perfume", "Person", "Phone", "Radio",
   ]),
   ...makeItems("Natural Material", [
     "Animal by-product", "Bamboo", "Browse", "Coconut husk", "Feather",
