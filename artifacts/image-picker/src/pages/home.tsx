@@ -155,6 +155,7 @@ import person from "@assets/Person_1779503697580.jpg";
 import phone from "@assets/Phone_1784340193835.jpeg";
 import heavyDutyPVCForageBag from "@assets/Heavy_Duty_PVC_Forage_Bag_1784340325075.jpeg";
 import blanket from "@assets/Blanket_1784348431813.webp";
+import snuffleMat from "@assets/Snuffle_mat_1784348464260.webp";
 
 const IMAGE_SRCS: Record<string, string> = {
   "Animal by-product": animalExtract,
@@ -308,6 +309,7 @@ const IMAGE_SRCS: Record<string, string> = {
   "Phone": phone,
   "Heavy Duty PVC Forage Bag": heavyDutyPVCForageBag,
   "Blanket": blanket,
+  "Snuffle mat": snuffleMat,
 };
 
 interface ImageData {
@@ -374,7 +376,7 @@ const IMAGES: ImageData[] = [
   ]),
   ...makeItems("Burlap", []),
   ...makeItems("Soft Fabric", [
-    "Baby toy", "Blanket",
+    "Baby toy", "Blanket", "Snuffle mat",
   ]),
   ...makeItems("Metal", [
     "ASAP Mirror", "Bell", "Bingo Ball", "Caitec Baffle Cage", "Caitec Stainless Steel Kabob",
