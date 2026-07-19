@@ -1,7 +1,6 @@
 import { Router, type IRouter } from "express";
 import { HealthCheckResponse } from "@workspace/api-zod";
 
-const router: IRouter = Router();
 
 import { Router, type Request, type Response } from "express";
 
